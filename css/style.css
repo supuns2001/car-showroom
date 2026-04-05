@@ -117,6 +117,10 @@ footer { background: var(--deep-navy); border-top: 1px solid var(--border); padd
 .vehicle-card .vehicle-badge { position: absolute; top: 12px; left: 12px; background: var(--gold); color: var(--midnight); font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 100px; letter-spacing: 0.05em; text-transform: uppercase; }
 
 /* Services */
+#services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; position: relative; }
+.process-grid-line { position: absolute; top: 36px; left: 12.5%; right: 12.5%; height: 2px; background: linear-gradient(90deg, var(--gold), var(--gold-light)); opacity: 0.3; }
+
 .service-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 32px 28px; transition: var(--transition); }
 .service-card:hover { border-color: rgba(201,168,76,0.35); transform: translateY(-4px); box-shadow: var(--shadow); }
 .service-icon { width: 56px; height: 56px; background: var(--gold-dim); border: 1px solid rgba(201,168,76,0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 20px; }
@@ -124,6 +128,9 @@ footer { background: var(--deep-navy); border-top: 1px solid var(--border); padd
 .service-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
 
 /* Reviews */
+#reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.rating-summary-card { display: grid; grid-template-columns: auto 1fr; gap: 48px; align-items: center; background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 60px; }
+
 .review-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 28px; transition: var(--transition); }
 .review-card:hover { border-color: rgba(201,168,76,0.25); }
 .stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; margin-bottom: 12px; }
@@ -218,6 +225,10 @@ footer { background: var(--deep-navy); border-top: 1px solid var(--border); padd
   .featured-grid { grid-template-columns: repeat(2, 1fr); }
   .why-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-grid { grid-template-columns: 1fr; }
+  #services-grid { grid-template-columns: repeat(2, 1fr); }
+  .process-grid { grid-template-columns: repeat(2, 1fr); }
+  .process-grid-line { display: none; }
+  #reviews-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
   nav ul { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--midnight); flex-direction: column; padding: 16px; border-bottom: 1px solid var(--border); gap: 4px; }
@@ -228,6 +239,10 @@ footer { background: var(--deep-navy); border-top: 1px solid var(--border); padd
   .why-grid { grid-template-columns: 1fr; }
   .vehicles-grid { grid-template-columns: 1fr; }
   .featured-grid { grid-template-columns: 1fr; }
+  #services-grid { grid-template-columns: 1fr; gap: 32px; }
+  .process-grid { grid-template-columns: 1fr; }
+  #reviews-grid { grid-template-columns: 1fr; }
+  .rating-summary-card { grid-template-columns: 1fr; gap: 24px; padding: 24px; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .gallery-item.wide { grid-column: span 1; }
   .gallery-item.tall { grid-row: span 1; min-height: 200px; }
